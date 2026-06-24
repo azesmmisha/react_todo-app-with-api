@@ -16,7 +16,7 @@ export const deleteTodo = (todoId: number) => {
 };
 
 export const patchTodo = (id: number, data: Partial<Omit<Todo, 'id'>>) => {
-  return client.patch<Todo>(`/todos/${id}?userId=${USER_ID}`, data);
+  return client.patch<Todo>(`/todos/${id}`, data);
 };
 
 // Add more methods here
