@@ -209,6 +209,8 @@ export const App: React.FC = () => {
 
     if (trimmed.length === 0 && editTodo?.id) {
       await handleDelete(editTodo.id);
+
+      return;
     }
 
     try {
